@@ -1,0 +1,96 @@
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="timeline.css">
+
+</head>
+<body>
+    <section class="slider-container">
+    <div class="slider-images">
+        <div class="slider-img">
+            <img src="assets/animeds.jpg" alt="1">
+            <h1>Nostalgia</h1>
+            <div class="details">
+                <h2>Feelings</h2>
+                <p>Apathy</p>
+            </div>
+        </div>
+        <div class="slider-img">
+            <img src="assets/bluearcade.jpg" alt="1">
+            <h1>Arcades</h1>
+            <div class="details">
+                <h2>Games</h2>
+                <p>Tranquility</p>
+            </div>
+        </div>
+        <div class="slider-img">
+            <img src="assets/itsmeandyou.jpg" alt="1">
+            <h1>Interlinked</h1>
+            <div class="details">
+                <h2>Soulmates</h2>
+                <p>I will never leave you.</p>
+            </div>
+        </div>
+        <div class="slider-img active">
+            <img src="assets/olddigitalcam.jpg" alt="1">
+            <h1>Digital Media</h1>
+            <div class="details">
+                <h2>Vibes</h2>
+                <p>I really miss those days.</p>
+            </div>
+        </div>
+        <div class="slider-img">
+            <img src="assets/oldjapanstreet.jpg" alt="1">
+            <h1>Photography</h1>
+            <div class="details">
+                <h2>Peace</h2>
+                <p>Where the past still plays.</p>
+            </div>
+        </div>
+        <div class="slider-img">
+            <img src="assets/oldtelevision.jpg" alt="1">
+            <h1>2016-2019 memories</h1>
+            <div class="details">
+                <h2>Rememberance</h2>
+                <p>Rewind. Respawn. Remember.</p>
+            </div>
+        </div>
+        <div class="slider-img">
+            <img src="assets/download (10).jpg" alt="1">
+            <h1>Cyberpunk</h1>
+            <div class="details">
+                <h2>Animation</h2>
+                <p>Pixels never die.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+        jQuery(document).ready(function($){
+            $('slider-img').on('click', function(){
+            $('.slider-img').removeClass('active');
+            $(this).addClass('active')
+        })
+        });
+    </script>
+
+
+
+    <div id="tray">
+
+      <div class="tray-item">
+        <a href="index.html"> World of Emotions</a>
+      </div>
+      
+      <div class="tray-item">
+        <a href="timeline.html">Nostlagia</a>
+      </div>
+
+      <div class="tray-item">
+        <a href="photogallery.html">Tranquility</a>
+        </div>
+</body>
+
+</html>
