@@ -1,4 +1,4 @@
-* {
+* { /* Global reset and font setting */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 }
 
 
-.slider-container {
+.slider-container { /* Container for the slider section */
     width: 100%;
     height: 100vh;
     background-image: url('assets/bg.jpg');
@@ -18,18 +18,27 @@
     justify-content: center;
 }
 
-.slider-images {
+.slider-images { /* Slider images setup */
     display: flex;
     align-items: center;
     gap: 20px;
+    animation: slider 1.5s ease-in-out infinite alternate;
 }
-.slider-images img{
+
+@keyframes slider { /* Slider animation */
+
+ to {transform: translateY(100px);}
+
+}
+
+
+.slider-images img{ /* Images inside the slider */
     width: 100%;
     height: 80%;
     object-fit: cover;
     border-radius: 6px;
 }
-.slider-img {
+.slider-img { /* Individual slider image setup */
     width: 100px;
     border-radius: 6px;
     cursor: pointer;
@@ -37,17 +46,17 @@
     transition: 0.7s ease;
 }
 
-.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{ /* First and last images */ /*These images are formatted into making a vertical outline so that the the 4th image is presented the easiest. */
     height: 480px;
 }
-.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){ /* Second and fifth images */
     height: 480px;
 }
-.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4),.slider-images .slider-img:nth-child(5){
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4),.slider-images .slider-img:nth-child(5){ /* Middle images */
     height: 665px;
 }
 
-h1{
+h1{ /* Title on each image */
     font-family: "Jost", sans-serif;
     font-size: 24px;
     text-align: left;
@@ -60,52 +69,23 @@ h1{
     transition: 0.7s ease;
 }
 
-.details{
-    position: absolute;
-    bottom: 43px;
-    left: 43px;
-}
 
-.details h2{
-    font-family: "Jost", sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    text-align: left;
-    line-height: 44px;
-    text-align: left;
-    text-transform: uppercase;
-    color: #ffffff;
-    transition: 0.7s ease;
-}
 
-.details p{
-    font-family: "Jost", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: left;
-    line-height: 33px;
-    text-align: left;
-    text-transform: uppercase;
-    color: #ffffff;
-    transition: 0.7s ease;
-    display: none;
-}
-
-.slider-img.active{
+.slider-img.active{ /* Active image styling */
     width: 666px !important;
     height: 650px !important;
 }
 
-.slider-img.active h1{
+.slider-img.active h1{ /* H1 title on active image */
     display: none;
 }
 
 
-.slider-img.active .details p, .slider-img.active .details h2{
+.slider-img.active .details p, .slider-img.active .details h2{ /* Details on active image */
     display: block;
 }
 
-#tray {
+#tray { /* Navigation tray at the bottom */
   position: fixed;
   font: 'monospace';
   font-size: 1rem;
@@ -119,7 +99,7 @@ h1{
   flex-direction: row;
 }
 
-.tray-item {
+.tray-item { /* Tray item styling */
   flex: 1 1 auto;
   border: 0px solid gray;
   padding: 15px;

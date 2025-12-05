@@ -8,13 +8,13 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #4a457c, #000000);
+  background: linear-gradient(135deg, #3326c0, #a100fe);
   margin: 0;
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
 }
 
-@keyframes gradient {
+@keyframes gradient { /* Gradient animation */
  0% { background-position: 0% 50%; }
  50% { background-position: 100% 50%; }
  100% { background-position: 0% 50%; }
@@ -22,7 +22,7 @@ body {
  }
 
 
-#tray {
+#tray { /* Added navigation tray to navigate through different pages */
   position: fixed;
   font: 'monospace';
   font-size: 1rem;
@@ -30,20 +30,22 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(21, 21, 21);
+  background-color: hsl(236, 71%, 69%);
   color: rgb(255, 255, 255);
   display: flex; 
   flex-direction: row;
 }
 
-.tray-item {
+.tray-item { /* Tray item styling */
   flex: 1 1 auto;
   border: 0px solid gray;
   padding: 15px;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
 }
 
-#content {
+#content { /* Added content section for centering */
   width: 200px;
   margin: 50px auto;
 }
@@ -64,8 +66,8 @@ body {
   transform-style: preserve-3d;
   animation: rotate 15s infinite linear;
 }
-
-.face {
+ 
+.face { /* Each face of the cube */
   position: absolute;
   width: 300px;
   height: 300px;
@@ -74,7 +76,7 @@ body {
   overflow: hidden;
 }
 
-.face img {
+.face img { /* Ensures images cover the entire face */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -98,7 +100,7 @@ body {
   100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
-.title {
+.title { /* Added title to the index page */
   position: absolute;
   font-family: '', sans-serif;
   font-size: 7rem;
@@ -110,15 +112,15 @@ body {
   text-align: right;
   text-align: top;
   right: 118%;
-  top: -95%;
+  top: -87%;
   z-index: 1; /* Below cube */
 }
 
 /* Subtext on the right side */
 .subtext {
   position: absolute;
-  right: 140%;
-  top: 95%;
+  right: 180%;
+  top: 60%;
   transform: translateY(-20%);
   color: #5a5375;
   text-shadow: 10px 5px 7px rgba(0, 0, 0, 0.5);
@@ -130,20 +132,20 @@ body {
   z-index: 3; /* Over cube if needed */
 }
 
-.carousel {
+.carousel { /* Added a horizontal scrolling carousel */
   margin: 100px auto;
-  width: 95%;
+  width: 75%;
   border: 3px solid white;
   display: flex;
   overflow-x: auto;
   gap: 1em;
 }
 
-.carousel::-webkit-scrollbar {
+.carousel::-webkit-scrollbar { /* Hides scrollbar */
   display: none;
 }
 
-.group {
+.group { /* Group of cards that spin */
   display: flex;
   width: max-content;
   align-items: top;
@@ -153,18 +155,30 @@ body {
   padding-right: 0.3em;
 }
 
-.card {
-  flex: 0 0 15rem;
-  height: 15rem;
+.card { /* Each individual card */
+  flex: 0 0 20rem;
+  height: 16rem;
   padding: 11rem;
-  background: rgb(22, 22, 22);
+  background:rgb(63, 88, 169);
   font-size: 1rem;
   border-radius: .1em;
   text-align: center;
   align-content: center;
+  animation: infinite pulse 5s ease-in-out;
 }
 
-@keyframes spin {
+@keyframes spin { /* Spin animation for the carousel */
   from {translate: 0;}
   to {translate: -100%;}
+}
+
+@keyframes pulse { /* Pulse animation for each card */
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(0.5); }
+}
+
+img { /* Ensures all images take full width of their container */
+
+  width: 100%;
 }
